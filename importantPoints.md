@@ -24,3 +24,9 @@ In React we do not have to worry on creating and updating DOM elements, instead 
 10. A library is a tool that provides specific functionality whereas a framwrok provides a set of tools and guidelines fo building applications.
 
 11. In react one component cannot return more than one element, so if we want to return 2 elements, then we shoud wrap both those elements in single element ex like div. But instead of adding an extra element we should use react fragments. Now when the component is rendered on the screen, we will not have a additional element like a div in the DOM. OR we can just use the empty brackets to tell react to use a fragment here
+
+12. Props or properties are input passed to a component, State is internal data managed by component that can change overtime.
+
+13. Props are similar to function arguments whereas state is similar to local variable
+
+14. Props are immutable(cannot be changed), state is mutable
