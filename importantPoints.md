@@ -30,3 +30,5 @@ In React we do not have to worry on creating and updating DOM elements, instead 
 13. Props are similar to function arguments whereas state is similar to local variable
 
 14. Props are immutable(cannot be changed), state is mutable
+
+15.React icons are basically react-components, try to use it as a react component.

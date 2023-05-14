@@ -11,6 +11,7 @@
 // {} => it is used to render content dynamically
 
 import { useState } from "react";
+import "./ListGroup.css";
 
 interface Props {
   items: string[];
