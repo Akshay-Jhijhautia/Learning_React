@@ -5,6 +5,8 @@ import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Buttons";
 import Like from "./components/Like";
+import Navbar from "./components/Navbar";
+import Cart from "./components/Cart";
 
 // function App() {
 //   const items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
@@ -46,11 +48,24 @@ import Like from "./components/Like";
 //   );
 // }
 
+// function App() {
+//   return (
+//     <div>
+//       <Like onClick={() => console.log("clicked")} />
+//     </div>
+//   );
+// }
+
+// Sharing state between two components
 function App() {
+  const [cartItems, setCartItems] = useState(["Product1", "Product2"]);
+
   return (
     <div>
-      <Like onClick={() => console.log("clicked")} />
+      <Navbar cartItemsCount={cartItems.length} />
+      <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
     </div>
   );
 }
+
 export default App;

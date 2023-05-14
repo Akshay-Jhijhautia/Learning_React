@@ -31,4 +31,21 @@ In React we do not have to worry on creating and updating DOM elements, instead 
 
 14. Props are immutable(cannot be changed), state is mutable
 
-15.React icons are basically react-components, try to use it as a react component.
+15. React icons are basically react-components, try to use it as a react component.
+
+# Few points about state hook
+
+- React updates state asynchronously, i.e not immediately,for performance reason
+- State is stored outside of components(including app component)
+- We can only use hooks at the top level of your component.
+- Group related variables inside an object.
+- Avoid deeply nested structures, when using state hook.
+
+* We should treat state objects as immutable only.
+* Sometimes, we need to share state between components.
+* Components that hold the state, is responsible for updating it.
+
+**Pure Function** - Given the same input, always returns the same result.
+
+ex. const result = myFunc(1); -> this function gives same result everytime it is invoked.
+React is designed around this concept, it expects every component to be a pure function. Then does have to re-render the component every time. To keep components pure we should keep the changes out of render phase, we should not change any object that existed before rendering.
