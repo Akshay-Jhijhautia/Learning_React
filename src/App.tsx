@@ -7,6 +7,7 @@ import Button from "./components/Buttons";
 import Like from "./components/Like";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
+import Form from "./components/Form";
 
 // function App() {
 //   const items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
@@ -57,13 +58,21 @@ import Cart from "./components/Cart";
 // }
 
 // Sharing state between two components
-function App() {
-  const [cartItems, setCartItems] = useState(["Product1", "Product2"]);
+// function App() {
+//   const [cartItems, setCartItems] = useState(["Product1", "Product2"]);
 
+//   return (
+//     <div>
+//       <Navbar cartItemsCount={cartItems.length} />
+//       <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
+//     </div>
+//   );
+// }
+
+function App() {
   return (
     <div>
-      <Navbar cartItemsCount={cartItems.length} />
-      <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
+      <Form></Form>
     </div>
   );
 }

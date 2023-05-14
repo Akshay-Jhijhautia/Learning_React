@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-//import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "./index.css";
 
 /* Here we are using ReactDOM to render the component tree, lines 7,8,9
 inside an element with id of root. Here in the tree, App component is wrapped 
