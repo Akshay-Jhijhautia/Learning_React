@@ -49,3 +49,49 @@ In React we do not have to worry on creating and updating DOM elements, instead 
 
 ex. const result = myFunc(1); -> this function gives same result everytime it is invoked.
 React is designed around this concept, it expects every component to be a pure function. Then does have to re-render the component every time. To keep components pure we should keep the changes out of render phase, we should not change any object that existed before rendering.
+
+# Effect hook:
+
+- It is used to execute a piece of code, after a component is rendered
+- Should be called at the top, and can be used multiple times.
+- When there are multiple effect hooks, react runs then in order, after each render.
+
+# Points
+
+- In react each element has a property or prop called "onClick".
+
+- "event" in arrow function is called as a browser event, type of this event is an object, it is called as
+  SyntheticBaseEvent, this is a in built is class in react,because different browsers have different implementation of
+  of event object, so to make is cross browser, react has a class. This class is wrapper around native browser event object.
+- Props or properties are input to our components
+- Interface- A typeScript property, that helps us define a shape or interface
+  of an object
+- Hook is a function that allows us to tap into, built-in features of react
+- In components, what we write i.e return is called jsx, in jsx we cannot user a for loop or a if statement, but with {} we can render anything dynamically
+- In jsx we can only use html or other react components we are using map to render data dynamically
+- In order for map to work in jsx, we wrap it in braces {}
+- Each list item in JSX should have a key property that uniquely identifies that item, react needs this to keep track of our items, so later when we add
+  or remove items dynamically, react knows what part of page should be updated
+- {} => it is used to render content dynamically.
+- Parameters passed in the component's function are called as props, i.e immutable(they cannot be changed). ex In list group we passed (items, heading, onSelectItem)
+- The function handleClick is called event handler, because its job is to handle a event, which in this case is click. There are
+- SelectedIndex = 0(First item is selected), =-1(No item is selected
+
+* UseState is a hook, using this, we can tell react that, this component can have data or state, that will change overtime. useState returns a array. This array has two elements a[0] and a[1]
+* State is mutable
+* a[0]: variable (selectedIndex), a[1]: updater function, this updated the a[0] variable, and react will be notified that state of our component has changed, and then react will re-render that component, it causes DOM to updated under the hood.Each component has its own state, even if we render ListGroup twice, both components will have their own state\*/
+* React Node is a class defined in react module, with the help of which we can pass complex html or simple string as child to a component. Using children prop, we can pass children to a component
+* useForm is a custom hook, it returns a object
+
+**In main.tsx**:
+
+- Here we are using ReactDOM to render the component tree, lines 7,8,9
+  inside an element with id of root. Here in the tree, App component is wrapped
+  by other component react.StrictMode(its purpose is to identify potential prblems)
+  So we are taking this component tree and rendering or displaying it inside and element
+  with id of root, and to do that we are using react dom library\_/
+
+- Due to app component wrapped in strict mode, react renders each component twice.
+  The first render is used for detecting issues with out code, and second render is used
+  to update the user interface. This is only for deveopment phase, not for production
+  phase.\_/

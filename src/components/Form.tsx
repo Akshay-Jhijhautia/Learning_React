@@ -1,4 +1,4 @@
-import { FieldValues, useForm } from "react-hook-form"; // useForm is a custom hook
+import { FieldValues, useForm } from "react-hook-form";
 import { z } from "zod"; //zod is used for schema based validation, like joi
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -16,7 +16,7 @@ const Form = () => {
     register,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm<FormData>({ resolver: zodResolver(schema) }); // useForm returns a object
+  } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = (data: FieldValues) => console.log(data);
 

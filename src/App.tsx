@@ -1,13 +1,14 @@
 import Message from "./Message";
 import ListGroup from "./components/ListGroup/ListGroup";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Buttons";
 import Like from "./components/Like";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
 import Form from "./components/Form";
+import ProductList from "./components/ProductList";
 
 // function App() {
 //   const items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
@@ -69,10 +70,28 @@ import Form from "./components/Form";
 //   );
 // }
 
+// function App() {
+//   return (
+//     <div>
+//       <Form></Form>
+//     </div>
+//   );
+// }
+
 function App() {
+  const [category, setCategory] = useState("");
+
   return (
     <div>
-      <Form></Form>
+      <select
+        name="form-select"
+        onChange={(event) => setCategory(event.target.value)}
+      >
+        <option value=""></option>
+        <option value="Clothing">Clothing</option>
+        <option value="Household">HouseHOld</option>
+      </select>
+      {<ProductList category={category} />}
     </div>
   );
 }
