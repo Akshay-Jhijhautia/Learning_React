@@ -59,7 +59,6 @@ React is designed around this concept, it expects every component to be a pure f
 # Points
 
 - In react each element has a property or prop called "onClick".
-
 - "event" in arrow function is called as a browser event, type of this event is an object, it is called as
   SyntheticBaseEvent, this is a in built is class in react,because different browsers have different implementation of
   of event object, so to make is cross browser, react has a class. This class is wrapper around native browser event object.
@@ -67,6 +66,10 @@ React is designed around this concept, it expects every component to be a pure f
 - Interface- A typeScript property, that helps us define a shape or interface
   of an object
 - Hook is a function that allows us to tap into, built-in features of react
+
+* this syntax "<h1>Hello World</h1>" is known as JSX or javascript XML, this code under the hood will get compiled to javascript code to react.create element with type of element as h1 and message as hello world.
+* With jsx we can easily describe the user interface of our application with html and javascript. JSX allows us to easily create dynamic content, ex here in '{}' we can write any javascript expression
+
 - In components, what we write i.e return is called jsx, in jsx we cannot user a for loop or a if statement, but with {} we can render anything dynamically
 - In jsx we can only use html or other react components we are using map to render data dynamically
 - In order for map to work in jsx, we wrap it in braces {}
@@ -82,6 +85,7 @@ React is designed around this concept, it expects every component to be a pure f
 * a[0]: variable (selectedIndex), a[1]: updater function, this updated the a[0] variable, and react will be notified that state of our component has changed, and then react will re-render that component, it causes DOM to updated under the hood.Each component has its own state, even if we render ListGroup twice, both components will have their own state\*/
 * React Node is a class defined in react module, with the help of which we can pass complex html or simple string as child to a component. Using children prop, we can pass children to a component
 * useForm is a custom hook, it returns a object
+* If you only need to export a single value from a module, or if the module represents a main feature of your application, use export default. If you need to export multiple values from a module, or if you want to organize your code into smaller, reusable components, use export with named exports.
 
 **In main.tsx**:
 
