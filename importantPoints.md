@@ -25,6 +25,8 @@ In React we do not have to worry on creating and updating DOM elements, instead 
 
 12. React icons are basically react-components, try to use it as a react component.
 
+13. DOM is created after React renders our component.
+
 # Few points about state hook
 
 - React updates state asynchronously, i.e not immediately,for performance reason
