@@ -1,10 +1,13 @@
 import React from "react";
 
 const ListGroup = () => {
-  const cities = ["Bangalore", "Hyderabad", "Chennai", "Mysore", "Gurgaon"];
+  let cities = ["Bangalore", "Hyderabad", "Chennai", "Mysore", "Gurgaon"];
+  //cities = [];
+
   return (
     <>
       <h1>List of cities</h1>
+      {cities.length === 0 && <p>No city found</p>}
       <ul className="list-group">
         {cities.map((city) => (
           <li className="list-group-item" key={city}>
