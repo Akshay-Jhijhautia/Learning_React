@@ -1,15 +1,19 @@
 import { useState } from "react";
 
-const ListGroup = () => {
+interface Props {
+  items: string[];
+  heading: string;
+}
+
+const ListGroup = ({ items, heading }: Props) => {
   const [active, setActive] = useState(-1);
-  let cities = ["Bangalore", "Hyderabad", "Chennai", "Mysore", "Gurgaon"];
 
   return (
     <>
-      <h1>List of cities</h1>
-      {cities.length === 0 && <p>No city found</p>}
+      <h1>{heading}</h1>
+      {items.length === 0 && <p>No city found</p>}
       <ul className="list-group">
-        {cities.map((city, index) => (
+        {items.map((city, index) => (
           <li
             className={
               active === index ? "list-group-item active" : "list-group-item"
