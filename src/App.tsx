@@ -5,9 +5,14 @@ function App() {
   let colors = ["red", "blue", "green", "brown", "yellow"];
   let heading = "Colors";
 
+  const handleSelected = (items: string) => console.log(items);
   return (
     <span>
-      <ListGroup items={colors} heading={heading} />
+      <ListGroup
+        items={colors}
+        heading={heading}
+        selectedItem={handleSelected}
+      />
     </span>
   );
 }
