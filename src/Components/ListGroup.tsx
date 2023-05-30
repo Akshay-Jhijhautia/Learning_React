@@ -1,9 +1,8 @@
-import React, { MouseEvent } from "react";
+import { useState } from "react";
 
 const ListGroup = () => {
+  const [active, setActive] = useState(-1);
   let cities = ["Bangalore", "Hyderabad", "Chennai", "Mysore", "Gurgaon"];
-
-  const handleClick = (event: MouseEvent) => console.log(event.type);
 
   return (
     <>
@@ -11,7 +10,13 @@ const ListGroup = () => {
       {cities.length === 0 && <p>No city found</p>}
       <ul className="list-group">
         {cities.map((city, index) => (
-          <li className="list-group-item" key={city} onClick={handleClick}>
+          <li
+            className={
+              active === index ? "list-group-item active" : "list-group-item"
+            }
+            key={city}
+            onClick={() => setActive(index)}
+          >
             {city}
           </li>
         ))}
