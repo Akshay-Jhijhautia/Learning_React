@@ -3,6 +3,7 @@ import ListGroup from "./Components/ListGroup";
 import Alert from "./Components/Alert";
 import Button from "./Components/Button";
 import { useState } from "react";
+import Like from "./Components/Like";
 
 // function App() {
 //   let colors = ["red", "blue", "green", "brown", "yellow"];
@@ -20,16 +21,24 @@ import { useState } from "react";
 //   );
 // }
 
+// function App() {
+//   const [alert, setAlert] = useState(false);
+
+//   const handleClick = () => setAlert(true);
+//   const handleAlert = () => setAlert(false);
+
+//   return (
+//     <div>
+//       {alert && <Alert onClose={handleAlert}>Alert</Alert>}
+//       <Button onClick={handleClick}>My button</Button>
+//     </div>
+//   );
+// }
+
 function App() {
-  const [alert, setAlert] = useState(false);
-
-  const handleClick = () => setAlert(true);
-  const handleAlert = () => setAlert(false);
-
   return (
     <div>
-      {alert && <Alert onClose={handleAlert}>Alert</Alert>}
-      <Button onClick={handleClick}>My button</Button>
+      <Like handleClick={() => console.log("clicked")}></Like>
     </div>
   );
 }
