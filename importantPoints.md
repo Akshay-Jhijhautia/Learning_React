@@ -29,17 +29,17 @@ In React we do not have to worry on creating and updating DOM elements, instead 
 
 # Few points about state hook
 
-- React updates state asynchronously, i.e not immediately,for performance reason
+- React updates state asynchronously, i.e not immediately,for performance reason, when the event is finished executing, then react updates the state, in one go, to avoid re-rendering again and again.
 - State is stored outside of components(including app component)
 - We can only use hooks at the top level of your component.
-- Group related variables inside an object.
+- Group related variables inside an object, in a state, rather than creating different state variables for related functionalities..
 - Avoid deeply nested structures, when using state hook.
 
 * We should treat state objects as immutable only.
 * Sometimes, we need to share state between components.
 * Component that hold the state, is responsible for updating it.
 
-**Pure Function** - Given the same input, always returns the same result.
+**Pure Function** - Given the same input, always returns the same result. To keep function pure we should keep the variable out of render phase.
 
 ex. const result = myFunc(1); -> this function gives same result everytime it is invoked.
 React is designed around this concept, it expects every component to be a pure function. Then it does have to re-render the component every time. To keep components pure we should keep the changes out of render phase, we should not change any object that existed before rendering.
