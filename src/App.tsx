@@ -1,6 +1,7 @@
 import Message from "./Components/Message";
 import ListGroup from "./Components/ListGroup";
 import Alert from "./Components/Alert";
+import Button from "./Components/Button";
 
 // function App() {
 //   let colors = ["red", "blue", "green", "brown", "yellow"];
@@ -19,12 +20,11 @@ import Alert from "./Components/Alert";
 // }
 
 function App() {
-  const message = "Hello Akshay";
   return (
     <div>
-      <Alert>
-        {message} <p>Welcome to React</p>
-      </Alert>
+      <Button handleClick={() => console.log("Clicked")} color="secondary">
+        My button
+      </Button>
     </div>
   );
 }
