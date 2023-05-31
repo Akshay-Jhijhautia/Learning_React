@@ -3,6 +3,8 @@ import ListGroup from "./Components/ListGroup";
 import Alert from "./Components/Alert";
 import Button from "./Components/Button";
 import Like from "./Components/Like";
+import Cart from "./Components/Cart";
+import Navbar from "./Components/Navbar";
 
 import { useState } from "react";
 
@@ -127,7 +129,14 @@ import { useState } from "react";
 // }
 
 function App() {
-  return <div>Hello World</div>;
+  const [products, setProducts] = useState(["Product 1", "Product 2"]);
+
+  return (
+    <div>
+      <Navbar noOfCartItems={products.length} />
+      <Cart cartItems={products} clearCart={() => setProducts([])} />
+    </div>
+  );
 }
 
 export default App;
