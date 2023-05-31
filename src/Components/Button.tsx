@@ -2,13 +2,12 @@ import React, { useState } from "react";
 
 interface Props {
   children: string;
-  handleClick: () => void;
-  color?: "primary" | "secondary";
+  onClick: () => void;
 }
 
-const Button = ({ children, handleClick, color }: Props) => {
+const Button = ({ children, onClick }: Props) => {
   return (
-    <button className={"btn btn-" + color} onClick={handleClick}>
+    <button className={"btn btn-primary"} onClick={onClick}>
       {children}
     </button>
   );
