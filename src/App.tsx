@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div>
-      {alert && <Alert onClick={handleAlert}>Alert</Alert>}
+      {alert && <Alert onClose={handleAlert}>Alert</Alert>}
       <Button onClick={handleClick}>My button</Button>
     </div>
   );

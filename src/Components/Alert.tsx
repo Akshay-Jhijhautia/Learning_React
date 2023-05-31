@@ -2,10 +2,10 @@ import React, { ReactNode } from "react";
 
 interface Props {
   children: string;
-  onClick: () => void;
+  onClose: () => void;
 }
 
-const Alert = ({ children, onClick }: Props) => {
+const Alert = ({ children, onClose }: Props) => {
   return (
     <>
       <div className="alert alert-primary alert-dismissible">
@@ -15,7 +15,7 @@ const Alert = ({ children, onClick }: Props) => {
           className="btn-close"
           data-bs-dismiss="alert"
           aria-label="Close"
-          onClick={onClick}
+          onClick={onClose}
         ></button>
       </div>
     </>
