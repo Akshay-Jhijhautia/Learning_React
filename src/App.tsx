@@ -5,6 +5,7 @@ import Button from "./Components/Button";
 import Like from "./Components/Like";
 import Cart from "./Components/Cart";
 import Navbar from "./Components/Navbar";
+import ExpandableText from "./Components/ExpandableText";
 
 import { useState } from "react";
 
@@ -128,13 +129,95 @@ import { useState } from "react";
 //   );
 // }
 
-function App() {
-  const [products, setProducts] = useState(["Product 1", "Product 2"]);
+// function App() {
+//   const [products, setProducts] = useState(["Product 1", "Product 2"]);
 
+//   return (
+//     <div>
+//       <Navbar noOfCartItems={products.length} />
+//       <Cart cartItems={products} clearCart={() => setProducts([])} />
+//     </div>
+//   );
+// }
+
+// function App() {
+//   const [game, setGame] = useState({
+//     id: 1,
+//     player: {
+//       name: "John",
+//     },
+//   });
+
+//   const handleClick = () => {
+//     setGame({ ...game, id: 2, player: { ...game.player, name: "Indraneel" } });
+//   };
+
+//   return (
+//     <div>
+//       {game.id} {game.player.name}
+//       <button onClick={handleClick}>Click Me</button>
+//     </div>
+//   );
+// }
+
+// function App() {
+//   const [pizza, setPizza] = useState({
+//     name: "Spicy Pepperoni",
+//     toppings: ["Mushroom"],
+//   });
+
+//   const handleClick = () => {
+//     setPizza({ ...pizza, toppings: [...pizza.toppings, "Cheese"] });
+//   };
+//   return (
+//     <div>
+//       {pizza.name} {pizza.toppings}{" "}
+//       <button onClick={handleClick}>Click Me</button>
+//     </div>
+//   );
+// }
+
+// function App() {
+//   const [cart, setCart] = useState({
+//     discount: 0.1,
+//     items: [
+//       { id: 1, title: "Product 1", quantity: 1 },
+//       { id: 2, title: "Product 2", quantity: 1 },
+//     ],
+//   });
+
+//   const handleClick = () => {
+//     setCart({
+//       ...cart,
+//       items: cart.items.map((item) =>
+//         item.id === 1 ? { ...item, quantity: item.quantity + 1 } : item
+//       ),
+//     });
+//   };
+//   return (
+//     <div>
+//       {cart.items[0].quantity}
+//       <button onClick={handleClick}>Click Me</button>
+//     </div>
+//   );
+// }
+
+function App() {
   return (
     <div>
-      <Navbar noOfCartItems={products.length} />
-      <Cart cartItems={products} clearCart={() => setProducts([])} />
+      <ExpandableText maxLength={100}>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto cum
+        tempora exercitationem amet cumque veritatis atque, laborum natus
+        aperiam quo quisquam consequuntur illum nobis labore nostrum, itaque,
+        alias possimus est nesciunt deleniti. Facilis veritatis magni, itaque
+        ullam omnis provident obcaecati quas numquam eligendi incidunt aliquam
+        repellendus eum in odit adipisci corporis magnam inventore blanditiis
+        debitis nihil, quod soluta vero optio. Dolorem quam perferendis placeat?
+        Consequatur eius officiis aliquam molestias, molestiae, qui iste aliquid
+        recusandae iusto eveniet dignissimos odit ratione atque itaque veniam
+        non ipsam est vel repellendus fugiat. Numquam vel omnis adipisci
+        distinctio porro non atque tempore quis aperiam accusantium!...
+      </ExpandableText>
     </div>
   );
 }
