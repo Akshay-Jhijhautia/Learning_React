@@ -6,7 +6,7 @@ import Like from "./Components/Like";
 import Cart from "./Components/Cart";
 import Navbar from "./Components/Navbar";
 import ExpandableText from "./Components/ExpandableText";
-
+import Form from "./Components/Form";
 import { useState } from "react";
 
 // function App() {
@@ -202,22 +202,30 @@ import { useState } from "react";
 //   );
 // }
 
+// function App() {
+//   return (
+//     <div>
+//       <ExpandableText maxLength={100}>
+//         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto cum
+//         tempora exercitationem amet cumque veritatis atque, laborum natus
+//         aperiam quo quisquam consequuntur illum nobis labore nostrum, itaque,
+//         alias possimus est nesciunt deleniti. Facilis veritatis magni, itaque
+//         ullam omnis provident obcaecati quas numquam eligendi incidunt aliquam
+//         repellendus eum in odit adipisci corporis magnam inventore blanditiis
+//         debitis nihil, quod soluta vero optio. Dolorem quam perferendis placeat?
+//         Consequatur eius officiis aliquam molestias, molestiae, qui iste aliquid
+//         recusandae iusto eveniet dignissimos odit ratione atque itaque veniam
+//         non ipsam est vel repellendus fugiat. Numquam vel omnis adipisci
+//         distinctio porro non atque tempore quis aperiam accusantium!...
+//       </ExpandableText>
+//     </div>
+//   );
+// }
+
 function App() {
   return (
     <div>
-      <ExpandableText maxLength={100}>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto cum
-        tempora exercitationem amet cumque veritatis atque, laborum natus
-        aperiam quo quisquam consequuntur illum nobis labore nostrum, itaque,
-        alias possimus est nesciunt deleniti. Facilis veritatis magni, itaque
-        ullam omnis provident obcaecati quas numquam eligendi incidunt aliquam
-        repellendus eum in odit adipisci corporis magnam inventore blanditiis
-        debitis nihil, quod soluta vero optio. Dolorem quam perferendis placeat?
-        Consequatur eius officiis aliquam molestias, molestiae, qui iste aliquid
-        recusandae iusto eveniet dignissimos odit ratione atque itaque veniam
-        non ipsam est vel repellendus fugiat. Numquam vel omnis adipisci
-        distinctio porro non atque tempore quis aperiam accusantium!...
-      </ExpandableText>
+      <Form />
     </div>
   );
 }
